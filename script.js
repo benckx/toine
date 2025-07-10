@@ -25,13 +25,14 @@ function renderSlide(slideId) {
 
 
 window.onload = () => {
-    getElementsByClassNameArray('step-link').forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const slideId = event.target.getAttribute('href').substring(1);
-            renderSlide(slideId);
+    getElementsByClassNameArray('step-link')
+        .forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const slideId = event.target.getAttribute('href').substring(1);
+                renderSlide(slideId);
+            });
         });
-    });
 
     // show the first slide by default
     renderSlide('slide1')
