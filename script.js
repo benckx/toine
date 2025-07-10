@@ -17,12 +17,13 @@ function renderSlide(slideId) {
             slide.classList.remove('visible-slides');
         });
         slide.classList.add('visible-slides');
-        if (sounds.has(slideId)) {
-            sounds.get(slideId).play();
+        if (options.has(slideId)) {
+            if (options.get(slideId).audio !== undefined) {
+                new Audio(`/sounds/${options.get(slideId).audio}`).play();
+            }
         }
     }
 }
-
 
 window.onload = () => {
     getElementsByClassNameArray('step-link')
@@ -35,5 +36,5 @@ window.onload = () => {
         });
 
     // show the first slide by default
-    renderSlide('slide1')
+    renderSlide(getElementsByClassNameArray('slides')[0].id);
 };

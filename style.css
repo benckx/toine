@@ -28,6 +28,10 @@ html, body {
     display: flex;
 }
 
+#slide2 {
+    background-color: #82ef39;
+}
+
 @media (max-width: 1000px) {
     .slides {
         font-size: 60px;

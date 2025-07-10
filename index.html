@@ -5,9 +5,19 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const sounds = new Map([
-            ['slide1', new Audio('/sounds/notification.mp3')],
-            ['slide2', new Audio('/sounds/two-notes-notification.mp3')]
+        const options = new Map([
+            [
+                'slide1',
+                {
+                    audio: 'notification.mp3'
+                }
+            ],
+            [
+                'slide2',
+                {
+                    audio: 'two-notes-notification.mp3'
+                }
+            ]
         ]);
     </script>
     <script defer src="script.js"></script>
