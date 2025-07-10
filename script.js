@@ -1,3 +1,12 @@
+const sounds = new Map();
+
+options.forEach((value, key) => {
+    if (value.audio !== undefined) {
+        const audio = new Audio(`/sounds/${value.audio}`);
+        sounds.set(key, audio);
+    }
+});
+
 function htmlCollectionToArray(htmlCollection) {
     const array = [];
     for (let i = 0; i < htmlCollection.length; i++) {
@@ -17,10 +26,8 @@ function renderSlide(slideId) {
             slide.classList.remove('visible-slides');
         });
         slide.classList.add('visible-slides');
-        if (options.has(slideId)) {
-            if (options.get(slideId).audio !== undefined) {
-                new Audio(`/sounds/${options.get(slideId).audio}`).play();
-            }
+        if (sounds.has(slideId)) {
+            sounds.get(slideId).play();
         }
     }
 }
