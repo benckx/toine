@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .slides {
+            width: 100%;
+            height: 300px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #639de0;
+            font-size: 24px;
+        }
+
+        .visible-slides {
+            display: flex;
+        }
+    </style>
+    <script>
+        const sounds = new Map([
+            ['slide1', new Audio('/sounds/notification.mp3')],
+            ['slide2', new Audio('/sounds/two-notes-notification.mp3')]
+        ]);
+
+        function htmlCollectionToArray(htmlCollection) {
+            const array = [];
+            for (let i = 0; i < htmlCollection.length; i++) {
+                array.push(htmlCollection[i]);
+            }
+            return array;
+        }
+
+        function getElementsByClassNameArray(className) {
+            return htmlCollectionToArray(document.getElementsByClassName(className));
+        }
+
+        function renderSlide(slideId) {
+            const slide = document.getElementById(slideId);
+            if (slide) {
+                getElementsByClassNameArray('slides').forEach(slide => {
+                    slide.classList.remove('visible-slides');
+                });
+                slide.classList.add('visible-slides');
+                if (sounds.has(slideId)) {
+                    sounds.get(slideId).play();
+                }
+            }
+        }
+
+
+        window.onload = () => {
+            getElementsByClassNameArray('step-link').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const slideId = event.target.getAttribute('href').substring(1);
+                    renderSlide(slideId);
+                });
+            });
+
+            // show the first slide by default
+            renderSlide('slide1')
+        };
+    </script>
+</head>
+<body>
+<div id="slide1" class="slides">
+    <div>test1</div>
+    <a href="#slide2" class="step-link">next slide</a>
+</div>
+<div id="slide2" class="slides">
+    <div>test2</div>
+    <a href="#slide1" class="step-link">previous slide</a>
+</div>
+</body>
+</html>
