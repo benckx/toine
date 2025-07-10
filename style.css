@@ -21,8 +21,15 @@ html, body {
     justify-content: center;
     background-color: #639de0;
     font-size: 24px;
+    font-family: 'Arial', sans-serif;
 }
 
 .visible-slides {
     display: flex;
+}
+
+@media (max-width: 1000px) {
+    .slides {
+        font-size: 60px;
+    }
 }
