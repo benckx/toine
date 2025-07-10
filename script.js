@@ -18,7 +18,9 @@ function renderSlide(slideId) {
         });
         slide.classList.add('visible-slides');
         if (sounds.has(slideId)) {
-            sounds.get(slideId).play();
+            const audio = sounds.get(slideId);
+            console.log(audio);
+            audio.play();
         }
     }
 }
