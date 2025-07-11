@@ -20,7 +20,8 @@ body, body * {
     display: none;
     background-color: #72a9e8;
     font-size: 24px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', sans-serif;
+    color: red;
 }
 
 .visible-slides {
@@ -31,7 +32,7 @@ body, body * {
 }
 
 #slide2 {
-    background-color: #82ef39;
+    background-color: green;
 }
 
 #slide3 {
