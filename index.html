@@ -7,7 +7,8 @@
     <script>
         const sounds = new Map([
             ['slide1', new Audio('sounds/notification.mp3')],
-            ['slide2', new Audio('sounds/two-notes-notification.mp3')]
+            ['slide2', new Audio('sounds/two-notes-notification.mp3')],
+            ['slide3', new Audio('sounds/click.mp3')]
         ]);
     </script>
     <script src="script.js"></script>
@@ -16,11 +17,20 @@
 <div id="container">
     <div id="slide1" class="slides">
         <div>slide 1</div>
-        <a href="#slide2" class="step-link">next slide</a>
+        <br/>
+        <div><a href="#slide2" class="step-link">slide 2</a></div>
+        <div><a href="#slide3" class="step-link">slide 3</a></div>
     </div>
     <div id="slide2" class="slides">
         <div>slide 2</div>
-        <a href="#slide1" class="step-link">previous slide</a>
+        <br/>
+        <div><a href="#slide1" class="step-link">slide 1</a></div>
+        <div><a href="#slide3" class="step-link">slide 3</a></div>
+    </div>
+    <div id="slide3" class="slides">
+        <div>slide 3</div>
+        <br/>
+        <div><a href="#slide1" class="step-link">slide 1</a></div>
     </div>
 </div>
 </body>
