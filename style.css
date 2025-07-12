@@ -19,7 +19,7 @@ body, body * {
     height: 100vh;
     display: none;
     background-image: linear-gradient(DeepSkyBlue, white 60%);
-    font-size: 24px;
+    font-size: 30px;
     font-family: 'Besley', serif;
     font-weight: 600;
     font-style: italic;
