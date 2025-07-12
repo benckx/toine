@@ -33,6 +33,14 @@ body, body * {
     justify-content: center;
 }
 
+.appear-post-sound {
+    visibility: hidden;
+}
+
+.appear-post-sound-visible {
+    visibility: visible;
+}
+
 #slide2 {
     background-color: green;
 }

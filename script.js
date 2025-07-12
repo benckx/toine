@@ -17,17 +17,41 @@ function getElementsByClassNameArray(className) {
  * @param initial {boolean}
  */
 function renderSlide(slideId, initial = false) {
-    const slide = document.getElementById(slideId);
-    if (slide !== null) {
+    function showPostSoundElements(slideDiv) {
+        htmlCollectionToArray(slideDiv.getElementsByClassName('appear-post-sound'))
+            .forEach(elementToShow => {
+                elementToShow.classList.add('appear-post-sound-visible');
+            });
+    }
+
+    function hidePostSoundElements() {
+        getElementsByClassNameArray('appear-post-sound-visible').forEach(sound => {
+            sound.classList.remove('appear-post-sound-visible');
+        });
+    }
+
+    const slideDiv = document.getElementById(slideId);
+    if (slideDiv !== null) {
         // show selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
             slide.classList.remove('visible-slides');
         });
-        slide.classList.add('visible-slides');
+        slideDiv.classList.add('visible-slides');
+
+        // hide all appear-post-sound
+        hidePostSoundElements();
 
         // play sound
-        if (!initial && sounds.has(slideId)) {
-            sounds.get(slideId).play();
+        if (!initial) {
+            if (sounds.has(slideId)) {
+                const audio = sounds.get(slideId);
+                audio.addEventListener('ended', () => {
+                    showPostSoundElements(slideDiv);
+                });
+                audio.play();
+            }
+        } else {
+            showPostSoundElements(slideDiv);
         }
 
         // apply other slide options
