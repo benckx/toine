@@ -32,14 +32,14 @@ function renderSlide(slideId, initial = false) {
 
     const slideDiv = document.getElementById(slideId);
     if (slideDiv !== null) {
+        // hide all appear-post-sound
+        hidePostSoundElements();
+
         // show selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
             slide.classList.remove('visible-slides');
         });
         slideDiv.classList.add('visible-slides');
-
-        // hide all appear-post-sound
-        hidePostSoundElements();
 
         // play sound
         if (!initial) {
