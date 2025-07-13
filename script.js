@@ -1,15 +1,17 @@
 // noinspection JSIgnoredPromiseFromCall
 
-function htmlCollectionToArray(htmlCollection) {
-    const array = [];
-    for (let i = 0; i < htmlCollection.length; i++) {
-        array.push(htmlCollection[i]);
-    }
-    return array;
+function hidePostSoundElements() {
+    getElementsByClassNameArray('appear-post-sound-visible')
+        .forEach(element => {
+            element.classList.remove('appear-post-sound-visible');
+        });
 }
 
-function getElementsByClassNameArray(className) {
-    return htmlCollectionToArray(document.getElementsByClassName(className));
+function showPostSoundElements(slideDiv) {
+    htmlCollectionToArray(slideDiv.getElementsByClassName('appear-post-sound'))
+        .forEach(element => {
+            element.classList.add('appear-post-sound-visible');
+        });
 }
 
 /**
@@ -17,25 +19,12 @@ function getElementsByClassNameArray(className) {
  * @param initial {boolean}
  */
 function renderSlide(slideId, initial = false) {
-    function showPostSoundElements(slideDiv) {
-        htmlCollectionToArray(slideDiv.getElementsByClassName('appear-post-sound'))
-            .forEach(elementToShow => {
-                elementToShow.classList.add('appear-post-sound-visible');
-            });
-    }
-
-    function hidePostSoundElements() {
-        getElementsByClassNameArray('appear-post-sound-visible').forEach(sound => {
-            sound.classList.remove('appear-post-sound-visible');
-        });
-    }
-
     const slideDiv = document.getElementById(slideId);
     if (slideDiv !== null) {
         // hide all appear-post-sound
         hidePostSoundElements();
 
-        // show selected slide
+        // show only selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
             slide.classList.remove('visible-slides');
         });
@@ -44,11 +33,7 @@ function renderSlide(slideId, initial = false) {
         // play sound
         if (!initial) {
             if (sounds.has(slideId)) {
-                const audio = sounds.get(slideId);
-                audio.addEventListener('ended', () => {
-                    showPostSoundElements(slideDiv);
-                });
-                audio.play();
+                sounds.get(slideId).play();
             }
         } else {
             showPostSoundElements(slideDiv);
@@ -65,6 +50,7 @@ function renderSlide(slideId, initial = false) {
 }
 
 window.onload = () => {
+    // create step-link event listeners
     getElementsByClassNameArray('step-link')
         .forEach(stepLink => {
             stepLink.addEventListener('click', (event) => {
@@ -73,6 +59,16 @@ window.onload = () => {
                 renderSlide(slideId);
             });
         });
+
+    // create post sound event listeners
+    sounds.forEach((audio, slideId) => {
+        audio.addEventListener('ended', () => {
+            const slideDiv = document.getElementById(slideId);
+            if (slideDiv != null) {
+                showPostSoundElements(slideDiv);
+            }
+        })
+    });
 
     renderSlide(FIRST_SLIDE, true);
 };
