@@ -19,9 +19,10 @@ body, body * {
     height: 100vh;
     display: none;
     background-image: linear-gradient(DeepSkyBlue, white 60%);
-    font-size: 30px;
-    font-family: 'Besley', serif;
+    font-size: 60px;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 600;
+    font-optical-sizing: auto;
     font-style: italic;
     color: red;
 }
