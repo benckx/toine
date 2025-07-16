@@ -44,6 +44,9 @@ function renderSlide(slideId, initial = false) {
         if (options !== null && options.title !== undefined) {
             document.getElementsByTagName('title').item(0).innerText = options.title;
         }
+
+        // Push state to history
+        history.pushState({ slideId }, '', `#${slideId}`);
     } else {
         console.error(`slide with id ${slideId} not found`);
     }
@@ -69,6 +72,12 @@ window.onload = () => {
             }
         })
     });
+
+    // Listen for back/forward navigation
+    window.onpopstate = (event) => {
+        const slideId = event.state?.slideId || FIRST_SLIDE;
+        renderSlide(slideId, true);
+    };
 
     renderSlide(FIRST_SLIDE, true);
 };
