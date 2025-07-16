@@ -66,7 +66,14 @@ a:visited {
   text-decoration: none;
   color: black;
 }
-
+a:active {
+  text-decoration: none;
+  color: green;
+}
+marquee {
+            color: green;
+            font-size: 50px;
+        }
 @media (max-width: 1000px) {
     .slides {
         font-size: 60px;
