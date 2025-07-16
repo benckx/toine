@@ -24,7 +24,7 @@ body, body * {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 600;
     font-optical-sizing: auto;
-    color: red;
+    color: HotPink;
     padding-left: 10%;
     padding-right: 10%;
     text-align: justify;
@@ -35,6 +35,7 @@ body, body * {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .appear-post-sound {
@@ -46,8 +47,8 @@ body, body * {
 }
 
 a:link {
-    text-decoration: none;
-    color: red;
+  text-decoration: none;
+  color: red;
 }
 
 a:hover {
@@ -66,10 +67,9 @@ a:active {
 }
 
 marquee {
-    color: green;
-    font-size: 50px;
-}
-
+            color: green;
+            font-size: 50px;
+        }
 @media (max-width: 1000px) {
     .slides {
         font-size: 60px;
