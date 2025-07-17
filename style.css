@@ -73,41 +73,47 @@ a:visited {
 a:hover, a:active {
   background-color: Chartreuse;
 }
- .marquee {
+.marquee {
       width: 100%;
-      font-weight: bold;
-      font-size: 100px;
+      white-space: nowrap;
+      box-sizing: border-box;
+      font-size :80px;
     }
 
     .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-
-    /* Défilement de droite à gauche */
-    .right-to-left span {
-      animation-name: scroll-left;
-      animation-duration: 7s;
+      animation: scroll-left 10s linear infinite;
     }
 
     @keyframes scroll-left {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+.marquee1 {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border: 2px solid #000;
     }
 
-    /* Défilement de gauche à droite */
-    .left-to-right span {
-      padding-left: 0;
+.marquee1 span {
+      display: inline-block;
       padding-right: 100%;
-      animation-name: scroll-right;
-      animation-duration: 5s;
+      animation: scroll-right 10s linear infinite;
     }
 
     @keyframes scroll-right {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(0); }
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
     }
 
 @media (max-width: 1000px) {
