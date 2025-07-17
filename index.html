@@ -13,9 +13,9 @@
 
         const sounds = new Map([
             ['slide1', new Audio('sounds/step.mp3')],
-            ['slide2', new Audio('sounds/two-notes-notification.mp3')],
-            ['slide3', new Audio('sounds/click.mp3')]
-            ['slide6', new Audio('sounds/toctoc.mp3')]
+            ['slide2', new Audio('sounds/toctoc.mp3')],
+            ['slide3', new Audio('sounds/click.mp3')],
+            ['slide6', new Audio('sounds/notification.mp3')]
         ]);
 
         const slideOptions = [
@@ -71,7 +71,7 @@
         </div>
     </div>
     <div id="slide4" class="slides">
-        <div>But you know, I'm a game, I'm surprised you haven't noticed yet. I'm the one playing and you're the
+        <div>But you know, I'm a game, I'm surprised you haven't noticed yet. I'm the one playing, and you're the
             character I'm going to guide.
         </div>
         <div class="marquee"><span>FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#slide6"
@@ -96,7 +96,7 @@
             Do you think you say the truth?
             Do you think you have answers?
             Do you think you have enough with what you have?
-            Can you loose your mind to win?
+            Can you lose your mind to win?
             Do you think you know what do you win when you loose ?
             Does enough never end?
             Do you think love is better when you own it or when you give it?
@@ -104,8 +104,10 @@
         </div>
     </div>
     <div id="slide7" class="slides">
-        This place is entirely designed for you, thanks to all the forms you have accepted. You’ll explore your inner shelf.
-        Before we begin, how would you like your session to feel today?
+        <div class="appear-post-sound">
+        This place is entirely designed for you, thanks to all the forms you have accepted. You’ll explore your inner
+        shelf. Before we begin, how would you like your session to feel today?
+            </div>
     </div>
 </div>
 
