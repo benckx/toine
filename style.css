@@ -28,6 +28,7 @@ body, body * {
     padding-left: 10%;
     padding-right: 10%;
     text-align: justify;
+
 }
 
 .visible-slides {
@@ -46,17 +47,31 @@ body, body * {
     visibility: visible;
 }
 
-a:link, a:visited {
-  background-color: #f44336;
+a:link {
+  background-color: HotPink;
   color: white;
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 10rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-shadow: 2px 2px 4px #000000;
+  border-style: outset;
+}
+
+a:visited {
+  background-color: SaddleBrown;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-style: outset;
 }
 
 a:hover, a:active {
-  background-color: red;
+  background-color: Chartreuse;
 }
 .marquee {
       width: 100%;
