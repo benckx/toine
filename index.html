@@ -12,9 +12,10 @@
         const FIRST_SLIDE = 'slide1';
 
         const sounds = new Map([
-            ['slide1', new Audio('sounds/notification.mp3')],
+            ['slide1', new Audio('sounds/step.mp3')],
             ['slide2', new Audio('sounds/two-notes-notification.mp3')],
             ['slide3', new Audio('sounds/click.mp3')]
+            ['slide6', new Audio('sounds/toctoc.mp3')]
         ]);
 
         const slideOptions = [
@@ -29,6 +30,10 @@
             {
                 id: 'slide3',
                 title: 'title 3'
+            },
+            {
+                id: 'slide6',
+                title: 'title 6'
             }
         ];
     </script>
@@ -84,7 +89,7 @@
     </div>
 
     <div id="slide6" class="slides">
-        <div style="height:80vh;margin-top:5%">
+        <div class="appear-post-sound" style="height:80vh;margin-top:5%">
             We are going to start with a list of questions in order to analyse your need.
             Do you laugh of your mistakes?
             Do you stop to look forward?
@@ -99,9 +104,8 @@
         </div>
     </div>
     <div id="slide7" class="slides">
-        This place is entirely designed for you, thanks to all the forms you have accepted. You'll open up to a gentle
-        algorithmic realignment. You’ll reconnect with your inner self. You’ll explore the inner shelves of your
-        desires, ambitions, drives, targets, goals, aspirations, with all the options.
+        This place is entirely designed for you, thanks to all the forms you have accepted. You’ll explore your inner shelf.
+        Before we begin, how would you like your session to feel today?
     </div>
 </div>
 
