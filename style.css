@@ -93,6 +93,51 @@ a:hover, a:active {
       100% {
         transform: translateX(-100%);
       }
+
+    .emoji-frame {
+      display: inline-block;
+      position: relative;
+      padding: 1em;
+      text-align: center;
+      font-weight: bold;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .emoji-frame::after {
+      content: "😃😃😃😃😃😃😃😃";
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .emoji-frame::before {
+      position: absolute;
+      top: -1.5em;
+      left: 0;
+      width: 100%;
+    }
+
+    .emoji-frame::after {
+      position: absolute;
+      bottom: -1.5em;
+      left: 0;
+      width: 100%;
+    }
+
+    .emoji-sides {
+      display: flex;
+      align-items: center;
+    }
+
+    .emoji-sides span {
+      font-size: 1.5em;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    .emoji-content {
+      padding: 0 1em;
     }
 @media (max-width: 1000px) {
     .slides {
