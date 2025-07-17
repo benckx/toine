@@ -73,72 +73,43 @@ a:visited {
 a:hover, a:active {
   background-color: Chartreuse;
 }
-.marquee {
+ .marquee {
       width: 100%;
-      white-space: nowrap;
-      box-sizing: border-box;
-      font-size :80px;
+      font-weight: bold;
+      font-size: 100px;
     }
 
     .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-left 10s linear infinite;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    /* Défilement de droite à gauche */
+    .right-to-left span {
+      animation-name: scroll-left;
+      animation-duration: 7s;
     }
 
     @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-
-    .emoji-frame {
-      display: inline-block;
-      position: relative;
-      padding: 1em;
-      text-align: center;
-      font-weight: bold;
-      background-color: #fff;
-      z-index: 1;
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
 
-    .emoji-frame::after {
-      content: "😃😃😃😃😃😃😃😃";
-      display: block;
-      text-align: center;
-      font-size: 1.5em;
+    /* Défilement de gauche à droite */
+    .left-to-right span {
+      padding-left: 0;
+      padding-right: 100%;
+      animation-name: scroll-right;
+      animation-duration: 5s;
     }
 
-    .emoji-frame::before {
-      position: absolute;
-      top: -1.5em;
-      left: 0;
-      width: 100%;
+    @keyframes scroll-right {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
     }
 
-    .emoji-frame::after {
-      position: absolute;
-      bottom: -1.5em;
-      left: 0;
-      width: 100%;
-    }
-
-    .emoji-sides {
-      display: flex;
-      align-items: center;
-    }
-
-    .emoji-sides span {
-      font-size: 1.5em;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-    }
-
-    .emoji-content {
-      padding: 0 1em;
-    }
 @media (max-width: 1000px) {
     .slides {
         font-size: 60px;

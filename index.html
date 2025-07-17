@@ -12,9 +12,9 @@
         const FIRST_SLIDE = 'slide1';
 
         const sounds = new Map([
-            ['slide1', new Audio('sounds/step.mp3')],
-            ['slide2', new Audio('sounds/toctoc.mp3')],
-            ['slide3', new Audio('sounds/click.mp3')],
+            ['slide1', new Audio('sounds/toctoc.mp3')],
+            ['slide2', new Audio('sounds/step.mp3')],
+            ['slide3', new Audio('sounds/help.mp3')],
             ['slide6', new Audio('sounds/notification.mp3')]
         ]);
 
@@ -43,18 +43,29 @@
 <body>
 <div id="container">
     <div id="slide1" class="slides">
-        <div class="appear-post-sound">
-            <p>💚 &nbsp;&nbsp;&nbsp;I accept the conditions of <a href="#slide2" class="step-link">use</a> without even
-                knowing the
-                purpose</p>
-            <p>🧡&nbsp;&nbsp;&nbsp;It sparks my interest, but I have to go <a href="#slide3"
-                                                                             class="step-link">shopping</a></p>
-            <p>💜&nbsp;&nbsp;&nbsp;I'd rather play a <a href="#slide4" class="step-link"> game</a></p>
-            <p>🤎&nbsp;&nbsp;&nbsp;Leave me <a href="#slide5" class="step-link">alone</a></p>
+        <div>
+            <div class="marquee left-to-right">
+                <span>☁️</span>
+            </div>
+            <div><a href="#slide2" class="step-link">ENTER</a></div>
+            <div class="marquee right-to-left">
+                <span>☁️</span>
+            </div>
         </div>
     </div>
     <div id="slide2" class="slides">
-        <div><span style="color:white">Thank you for your confidence, I'm delighted to be able to work on you. It's a good sign that you already
+        <div class="appear-post-sound">
+            <p>💚 &nbsp;&nbsp;&nbsp;I accept the conditions of <a href="#slide3" class="step-link">use</a> without even
+                knowing the
+                purpose</p>
+            <p>🧡&nbsp;&nbsp;&nbsp;It sparks my interest, but I have to go <a href="#slide4"
+                                                                             class="step-link">shopping</a></p>
+            <p>💜&nbsp;&nbsp;&nbsp;I'd rather play a <a href="#slide5" class="step-link"> game</a></p>
+            <p>🤎&nbsp;&nbsp;&nbsp;Leave me <a href="#slide6" class="step-link">alone</a></p>
+        </div>
+    </div>
+    <div id="slide3" class="slides">
+        <div><span style="color:white">I'm delighted to be able to work on you. It's a good sign that you already
             recognize the need to get help.</span>
         </div>
         <p></p>
@@ -62,7 +73,7 @@
                                                                                                           class="step-link">SUPERSELF</a></span>
         </div>
     </div>
-    <div id="slide3" class="slides">
+    <div id="slide4" class="slides">
         <div>It's the ideal setting for the experiment I'm proposing. You'll even be able to readjust your running list
             to suit your new goals.
         </div>
@@ -70,7 +81,7 @@
                                                                                                           class="step-link">SUPERSELF</a></span>
         </div>
     </div>
-    <div id="slide4" class="slides">
+    <div id="slide5" class="slides">
         <div>But you know, I'm a game, I'm surprised you haven't noticed yet. I'm the one playing, and you're the
             character I'm going to guide.
         </div>
@@ -78,7 +89,7 @@
                                                                                                           class="step-link">SUPERSELF</a></span>
         </div>
     </div>
-    <div id="slide5" class="slides">
+    <div id="slide6" class="slides">
         <div>Everything was off to a good start, I had high hopes for you. I'd even bought a domain with the right
             spelling of your name. You don't even know what you're going to miss.
         </div>
@@ -88,7 +99,7 @@
         </div>
     </div>
 
-    <div id="slide6" class="slides">
+    <div id="slide7" class="slides">
         <div class="appear-post-sound" style="height:80vh;margin-top:5%">
             We are going to start with a list of questions in order to analyse your need.
             Do you laugh of your mistakes?
@@ -103,13 +114,14 @@
             Can you find the right <a href="#slide7" class="step-link">can?</a>
         </div>
     </div>
-    <div id="slide7" class="slides">
+    <div id="slide8" class="slides">
         <div class="appear-post-sound">
-        This place is entirely designed for you, thanks to all the forms you have accepted. You’ll explore your inner
-        shelf. Before we begin, how would you like your session to feel today?
-            </div>
+            This place is entirely designed for you, thanks to all the forms you have accepted. You’ll explore your
+            inner
+            shelf. Before we begin, how would you like your session to feel today?
+        </div>
     </div>
-</div>
 
+</div>
 </body>
 </html>
