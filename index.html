@@ -9,10 +9,10 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const FIRST_SLIDE = 'slide1';
+        const FIRST_SLIDE = 'enter';
 
         const sounds = new Map([
-            ['slide1', new Audio('sounds/toctoc.mp3')],
+            ['enter', new Audio('sounds/toctoc.mp3')],
             ['slide2', new Audio('sounds/step.mp3')],
             ['slide3', new Audio('sounds/help.mp3')],
             ['slide4', new Audio('sounds/list.mp3')],
@@ -24,7 +24,7 @@
 
         const slideOptions = [
             {
-                id: 'slide1',
+                id: 'enter',
                 title: 'title 1'
             },
             {
@@ -58,7 +58,7 @@
 </head>
 <body>
 <div id="container">
-    <div id="slide1" class="slides">
+    <div id="enter" class="slides">
         <div class="marquee">
             <span style="margin-bottom:5%">☁️</span>
         </div>
