@@ -16,7 +16,7 @@ body, body * {
 }
 
 .slides {
-    width: 75%;
+    width: 100%;
     height: 80vh;
     display: none;
     font-size: 30px;
@@ -24,8 +24,6 @@ body, body * {
     font-weight: 600;
     font-optical-sizing: auto;
     color: HotPink;
-    padding-left: 10%;
-    padding-right: 10%;
     text-align: justify;
 
 }
@@ -75,7 +73,6 @@ a:hover, a:active {
 
 .marquee {
     width: 100%;
-    white-space: nowrap;
     box-sizing: border-box;
     font-size: 80px;
 }
@@ -95,19 +92,6 @@ a:hover, a:active {
     }
 }
 
-.marquee left-to-right {
-    width: 100%;
-    white-space: nowrap;
-    box-sizing: border-box;
-    font-size: 80px;
-}
-
-.marquee left-to-right span {
-    display: inline-block;
-    padding-right: 100%;
-    animation: scroll-right 10s linear infinite;
-}
-
 @keyframes scroll-right {
     0% {
         transform: translateX(-100%);
@@ -118,6 +102,10 @@ a:hover, a:active {
 }
 
 @media (max-width: 1000px) {
+    body {
+        width: 88vh;
+    }
+
     .slides {
         font-size: 60px;
     }
