@@ -78,7 +78,7 @@ a:hover, a:active {
 }
 
 .marquee span {
-    display: inline-block;
+    display: flex;
     padding-left: 100%;
     animation: scroll-left 10s linear infinite;
 }
