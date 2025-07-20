@@ -9,7 +9,7 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const FIRST_SLIDE = 'enter';
+        const FIRST_SLIDE = 'slide3';
 
         const sounds = new Map([
             ['enter', new Audio('sounds/toctoc.mp3')],
@@ -19,7 +19,8 @@
             ['slide5', new Audio('sounds/guide.mp3')],
             ['slide6', new Audio('sounds/miss.mp3')],
             ['slide7', new Audio('sounds/need.mp3')],
-            ['slide8', new Audio('sounds/innershelf.mp3')],
+            ['slide8', new Audio('sounds/session.mp3')],
+            ['slide9', new Audio('sounds/yoga.mp3')],
         ]);
 
         const slideOptions = [
@@ -60,35 +61,45 @@
 <div id="container">
     <div id="enter" class="slides">
         <div class="marquee">
-            <span style="margin-bottom:5%">☁️</span>
+            <span style="font-size:300%;margin-bottom:5%">☁️</span>
         </div>
-        <a href="#slide2" class="step-link">ENTER</a>
+        <span style="font-size:100px;"><a href="#slide2" class="step-link">ENTER</a></span>
         <div class="marquee">
-            <span style="margin-top:5%; animation:scroll-right 4s linear infinite">☁️</span>
+            <span style="font-size:300%;margin-top:5%; animation:scroll-right 4s linear infinite">☁️</span>
         </div>
     </div>
     <div id="slide2" class="slides">
-        <div class="appear-post-sound">
-            <p>
-                💚&nbsp;&nbsp;&nbsp;I accept the conditions of <a href="#slide3" class="step-link">use</a> without even
-                knowing the purpose
-            </p>
-            <p>
-                🧡&nbsp;&nbsp;&nbsp;It sparks my interest, but I have to go
-                <a href="#slide4" class="step-link">shopping</a>
-            </p>
-            <p>
-                💜&nbsp;&nbsp;&nbsp;I'd rather play a <a href="#slide5" class="step-link"> game</a>
-            </p>
-            <p>
-                🤎&nbsp;&nbsp;&nbsp;Leave me <a href="#slide6" class="step-link">alone</a>
-            </p>
+        <div class="appear-post-sound" style="padding:10%;font-size:100%">
+            <table style="width:100%">
+                <tr>
+                    <td><a href="#slide3" class="step-link">💚</a>
+                    </td>
+                    <td>I accept the conditions of use without even knowing the purpose
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#slide4" class="step-link">🧡</a>
+                    <td>It sparks my interest, but I have to go shopping
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#slide5" class="step-link">💜</a>
+                    </td>
+                    <td>I'd rather play a game
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#slide6" class="step-link">🤎</a>
+                    </td>
+                    <td>Leave me alone</td>
+                </tr>
+            </table>
         </div>
     </div>
     <div id="slide3" class="slides">
         <div class="appear-post-sound">
             <div class="marquee">
-            <span>FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="padding-left:0;animation:scroll-right 4s linear infinite">FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#slide7" class="step-link">SUPERSELF</a></span>
             </div>
         </div>
@@ -96,7 +107,7 @@
     <div id="slide4" class="slides">
         <div class="appear-post-sound">
             <div class="marquee">
-            <span>FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="animation:scroll-right 4s linear infinite">FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#slide7" class="step-link">SUPERSELF</a></span>
             </div>
         </div>
@@ -172,10 +183,18 @@
     </div>
     <div id="slide8" class="slides">
         <div class="appear-post-sound">
-            <p>🥒 I want to feel like a houseplant with goals.</p>
-            <p>🍑 I want personal growth that would look good on Instagram.</p>
-            <p>🍄 I’d prefer an experience free of strong opinions and emotions.</p>
-            <p>🌶️ I like strong sensations and extreme practices. </p>
+            <p>🥒 I want to feel like a <a href="#slide9" class="step-link">houseplant</a> with goals.</p>
+            <p>🍑 I want personal <a href="#slide9" class="step-link">growth</a> that would look good on Instagram.</p>
+            <p>🍄 I’d prefer an experience free of <a href="#slide9" class="step-link">opinions</a> and emotions.</p>
+            <p><a href="#slide9" class="step-link">🌶️</a> I like strong sensations and extreme practices. </p>
+        </div>
+    </div>
+    <div id="slide9" class="slides">
+        <div class="appear-post-sound">
+            <p>🌽 In the past, when real lavender fields still existed.</p>
+            <p>🍌 In my grandmother cupboard, hiding with a boy when I was seven.</p>
+            <p>🍋 In a supermarket, cleaning aisle </p>
+            <p>🧀 I don't want to stay here, it stinks so much, please help me to leave this horrible space. </p>
         </div>
     </div>
 </div>
