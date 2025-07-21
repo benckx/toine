@@ -24,7 +24,6 @@ body, body * {
     font-weight: 500;
     font-optical-sizing: auto;
     color: HotPink;
-    text-align: justify;
 
 }
 
@@ -47,8 +46,9 @@ body, body * {
 a:link {
     background-color: HotPink;
     color: white;
-    padding: 25px 25px;
+    padding: 40px 50px;
     text-align: center;
+    font-size:80px;
     text-decoration: none;
     display: inline-block;
     border-radius: 10rem;
