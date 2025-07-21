@@ -104,7 +104,7 @@ th, td {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 100%) {
     body {
         width: 88vh;
     }
