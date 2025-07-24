@@ -9,7 +9,7 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const FIRST_SLIDE = 'slide14';
+        const FIRST_SLIDE = 'enter';
 
         const sounds = new Map([
             ['enter', new Audio('sounds/toctoc.mp3')],
@@ -75,15 +75,50 @@
 <body>
 <div id="container">
     <div id="enter" class="slides">
+        <div id="emoji">💸️</div>
+        <script>
+            const emoji = document.getElementById("emoji");
+
+            // Taille de l'emoji
+            const emojiSize = 80; // en pixels
+            let x = 100;
+            let y = 100;
+            let dx = 3;
+            let dy = 2;
+
+            function animate() {
+              const width = window.innerWidth;
+              const height = window.innerHeight;
+
+              x += dx;
+              y += dy;
+
+              // Rebond sur les bords
+              if (x + emojiSize >= width || x <= 0) {
+                dx = -dx;
+              }
+
+              if (y + emojiSize >= height || y <= 0) {
+                dy = -dy;
+              }
+
+              emoji.style.left = x + "px";
+              emoji.style.top = y + "px";
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+        </script>
         <div class="marquee">
-            <span style="font-size:250px;margin-bottom:20px">☁️</span>
+            <span style="font-size:70px;color:white;margin-bottom:10px;animation:scroll-left 6s linear infinite;text-shadow: 2px 2px 4px #000000;">
+                📱📱📱TO📱📱📱BE📱📱📱USED📱📱📱ON📱📱📱A📱📱📱PHONE📱📱📱</span>
         </div>
-        <div>
-            <span style="font-size:90px;"><a href="#slide2" class="step-link">ENTER</a>
-            </span>
-        </div>
+        <div style="font-size:300px;text-align:center">👛</div>
+        <a href="#slide2" class="step-link">ENTER</a>
         <div class="marquee">
-            <span style="font-size:250px;margin-top:20px; animation:scroll-right 4s linear infinite">☁️</span>
+            <span style="font-size:70px;color:DeepSkyBlue;margin-bottom:20px;text-shadow: 2px 2px 4px #000000;">
+                🎧🎧🎧YOU🎧🎧🎧PLUG🎧🎧🎧IN🎧🎧🎧YOUR🎧🎧🎧HEADPHONES🎧🎧🎧AND🔊🔊🔊TURN🔊🔊🔊UP🔊🔊🔊THE🔊🔊🔊SOUND🔊🔊🔊</span>
         </div>
     </div>
     <div id="slide2" class="slides">
@@ -564,7 +599,8 @@
     <div id="slide22" class="slides">
         <div class="appear-post-sound" style="padding:10px;margin-top:20px">
             🛒 Thank you for giving us your precious time and for so kindly providing us with countless data through the
-            many forms. Without you, our AI could no longer function. We need to be watered so that we can continue to help you with
+            many forms. Without you, our AI could no longer function. We need to be watered so that we can continue to
+            help you with
             each passing day.
         </div>
     </div>

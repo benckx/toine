@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0%;
     padding: 0;
+    overflow: hidden;
 }
 
 /* https://stackoverflow.com/questions/13416989/computed-font-size-is-bigger-than-defined-in-css-on-the-asus-nexus-7 */
@@ -78,6 +79,7 @@ th, td {
     width: 100%;
     font-size: 80px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .marquee span {
@@ -103,6 +105,12 @@ th, td {
         transform: translateX(0%);
     }
 }
+#emoji {
+      position: absolute;
+      font-size: 9rem;
+      user-select: none;
+      pointer-events: none;
+    }
 
 @media (max-width:1000px) {
     body {
