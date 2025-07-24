@@ -47,7 +47,7 @@ body, body * {
 a:link {
     background-color: HotPink;
     color: white;
-    padding: 40px 50px;
+    padding: 30px 40px;
     text-align: center;
     font-size:70px;
     text-decoration: none;
@@ -61,7 +61,7 @@ a:link {
 a:visited {
     background-color: SaddleBrown;
     color: white;
-    padding: 14px 25px;
+    padding: 30px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -77,7 +77,8 @@ th, td {
 
 .marquee {
     width: 100%;
-    font-size: 80px;
+    font-size: 70px;
+    padding:20px;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -118,6 +119,43 @@ th, td {
     padding:150px;
     padding-left:40px;
   }
+ .tete {
+     font-size: 100px;
+     display: inline-block;
+     animation: growAndFade 10s forwards;
+     position: absolute;
+     transform: translate(-50%, -50%);
+ }
+
+ @keyframes growAndFade {
+           0% {
+             transform: scale(1);
+             opacity: 1;
+           }
+           95% {
+             transform: scale(20);
+             opacity: 1;
+           }
+           100% {
+             transform: scale(20);
+             opacity: 0;
+           }
+         }
+ .turningemoji {
+       font-size: 60px;
+       display: inline-block;
+       animation: spin 2s linear infinite;
+     }
+
+     @keyframes spin {
+       from {
+         transform: rotate(0deg);
+       }
+       to {
+         transform: rotate(360deg);
+       }
+     }
+
 
 @media (max-width:1000px) {
     body {
