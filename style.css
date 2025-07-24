@@ -121,10 +121,12 @@ th, td {
   }
  .tete {
      font-size: 100px;
+     opacity: 0;
      display: inline-block;
-     animation: growAndFade 10s forwards;
+     animation: growAndFade 8s ease-out forwards;
      position: absolute;
      transform: translate(-50%, -50%);
+     animation-delay: 1s;
  }
 
  @keyframes growAndFade {
@@ -137,24 +139,33 @@ th, td {
              opacity: 1;
            }
            100% {
-             transform: scale(20);
+             transform: scale(1);
              opacity: 0;
            }
          }
  .turningemoji {
        font-size: 60px;
        display: inline-block;
-       animation: spin 2s linear infinite;
+       position:absolute;
+       opacity: 0;
+       animation: spin 9s linear forwards;
+       animation-delay: 1s;
      }
 
      @keyframes spin {
-       from {
-         transform: rotate(0deg);
-       }
-       to {
-         transform: rotate(360deg);
-       }
-     }
+           0% {
+             transform: rotate(0deg);
+             opacity: 0;
+           }
+           1% {
+             transform: rotate(360deg);
+             opacity: 1; /* devient visible au début de l'animation */
+           }
+
+           100% {
+             opacity: 0;
+           }
+         }
 
 
 @media (max-width:1000px) {
