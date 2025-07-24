@@ -49,7 +49,7 @@ a:link {
     color: white;
     padding: 40px 50px;
     text-align: center;
-    font-size:80px;
+    font-size:70px;
     text-decoration: none;
     display: inline-block;
     border-radius: 10rem;
@@ -111,6 +111,13 @@ th, td {
       user-select: none;
       pointer-events: none;
     }
+#purse {
+    background:url("images/purse_1f45b.png");
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+    padding:150px;
+    padding-left:40px;
+  }
 
 @media (max-width:1000px) {
     body {
