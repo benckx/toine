@@ -124,7 +124,6 @@ th, td {
      opacity: 0;
      display: inline-block;
      animation: growAndFade 8s ease-out forwards;
-     position: absolute;
      transform: translate(-50%, -50%);
      animation-delay: 1s;
  }
