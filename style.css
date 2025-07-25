@@ -73,6 +73,7 @@ a:hover, a:active {
 }
 th, td {
   padding: 20px;
+  text-align: justify;
 }
 
 .marquee {
@@ -80,6 +81,7 @@ th, td {
     font-size: 70px;
     padding:20px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .marquee span {
@@ -125,6 +127,7 @@ th, td {
      animation: growAndFade 8s ease-out forwards;
      transform: translate(-50%, -50%);
      animation-delay: 1s;
+     position:absolute;
  }
 
  @keyframes growAndFade {
