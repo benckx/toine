@@ -73,7 +73,7 @@ a:hover, a:active {
 }
 th, td {
   padding: 20px;
-  text-align: justify;
+  overflow:auto;
 }
 
 .marquee {
