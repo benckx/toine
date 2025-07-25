@@ -75,41 +75,6 @@
 <body>
 <div id="container">
     <div id="enter" class="slides">
-        <div id="emoji">💸️</div>
-        <script>
-            const emoji = document.getElementById("emoji");
-
-            // Taille de l'emoji
-            const emojiSize = 80; // en pixels
-            let x = 100;
-            let y = 100;
-            let dx = 3;
-            let dy = 2;
-
-            function animate() {
-              const width = window.innerWidth;
-              const height = window.innerHeight;
-
-              x += dx;
-              y += dy;
-
-              // Rebond sur les bords
-              if (x + emojiSize >= width || x <= 0) {
-                dx = -dx;
-              }
-
-              if (y + emojiSize >= height || y <= 0) {
-                dy = -dy;
-              }
-
-              emoji.style.left = x + "px";
-              emoji.style.top = y + "px";
-
-              requestAnimationFrame(animate);
-            }
-
-            animate();
-        </script>
         <div class="marquee"
              style="font-size:70px;color:white;margin-bottom:10px;animation:scroll-left 6s linear infinite;text-shadow: 2px 2px 4px #000000;">
             📱📱📱TO📱📱📱BE📱📱📱USED📱📱📱ON📱📱📱A📱📱📱PHONE📱📱📱
