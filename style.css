@@ -74,6 +74,7 @@ a:hover, a:active {
 th, td {
   padding: 20px;
   margin-right:50px;
+  position:absolute;
 }
 
 .marquee {
@@ -164,29 +165,6 @@ th, td {
            }
 
            100% {
-             opacity: 0;
-           }
-         }
-.tourner {
-       font-size: 60px;
-       display: inline-block;
-       position:absolute;
-       opacity: 0;
-       animation: spin 15s linear forwards;
-       animation-delay: 1s;
-     }
-
-     @keyframes spin {
-           0% {
-             opacity: 0;
-           }
-           5% {
-             transform: rotate(360deg);
-             opacity: 1;
-           }
-
-           100% {
-             transform: rotate(0deg);
              opacity: 0;
            }
          }
