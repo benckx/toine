@@ -74,7 +74,7 @@ a:hover, a:active {
 th, td {
   padding: 20px;
   margin-right:50px;
-  position:absolute;
+  position:flex;
 }
 
 .marquee {
