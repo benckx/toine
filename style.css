@@ -43,12 +43,6 @@ html, body, #container, .slides {
 
 }
 
-#slide7 {
-    overflow: hidden;
-    height: 100vh;
-    padding-top: 40px;
-}
-
 .appear-post-sound {
     visibility: hidden;
 }
