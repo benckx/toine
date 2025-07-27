@@ -24,6 +24,25 @@ function renderSlide(slideId, initial = false) {
         // hide all appear-post-sound
         hidePostSoundElements();
 
+        const emojiElements = [];
+        emojiElements.push(...getElementsByClassNameArray('turningemoji'))
+        emojiElements.push(...getElementsByClassNameArray('tete'));
+        emojiElements.forEach(element => {
+            element.style.display = 'inline-block';
+        });
+
+        const maxDelay = Math.max(
+            ...emojiElements.map(el => parseFloat(window.getComputedStyle(el).animationDelay) || 0)
+        );
+
+        const delay = maxDelay + 8;
+
+        setTimeout(() => {
+            emojiElements.forEach(el => {
+                el.style.display = 'none';
+            });
+        }, delay * 1_000);
+
         // show only selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
             slide.classList.remove('visible-slides');
@@ -40,13 +59,17 @@ function renderSlide(slideId, initial = false) {
         }
 
         // apply other slide options
-        const options = slideOptions.find(option => option.id === slideId);
-        if (options !== null && options.title !== undefined) {
-            document.getElementsByTagName('title').item(0).innerText = options.title;
+        try {
+            const options = slideOptions.find(option => option.id === slideId);
+            if (options !== null && typeof options.title !== 'undefined') {
+                document.getElementsByTagName('title').item(0).innerText = options.title;
+            }
+        } catch (e) {
+            console.log(`Error applying options for slide ${slideId}:`, e);
         }
 
         // Push state to history
-        history.pushState({ slideId }, '', `#${slideId}`);
+        history.pushState({slideId}, '', `#${slideId}`);
     } else {
         console.error(`slide with id ${slideId} not found`);
     }
