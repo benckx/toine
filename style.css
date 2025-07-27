@@ -81,11 +81,11 @@ a:hover, a:active {
 
 th, td {
     padding: 20px;
-    position: flex;
+    /*position: flex;*/
 }
 
 .marquee {
-    width: 100%;
+    width: 100vw;
     font-size: 70px;
     padding: 20px;
     white-space: nowrap;

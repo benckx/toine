@@ -25,23 +25,25 @@ function renderSlide(slideId, initial = false) {
         hidePostSoundElements();
 
         const emojiElements = [];
-        emojiElements.push(...getElementsByClassNameArray('turningemoji'))
-        emojiElements.push(...getElementsByClassNameArray('tete'));
+        emojiElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('turningemoji')));
+        emojiElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('tete')));
         emojiElements.forEach(element => {
             element.style.display = 'inline-block';
         });
 
-        const maxDelay = Math.max(
+        const maxDelayInSec = Math.max(
             ...emojiElements.map(el => parseFloat(window.getComputedStyle(el).animationDelay) || 0)
         );
 
-        const delay = maxDelay + 8;
+        const effectiveDelayInSec = maxDelayInSec + 8;
+
+        console.log(`[${slideId}] - effective delay: ${effectiveDelayInSec} sec.`);
 
         setTimeout(() => {
             emojiElements.forEach(el => {
                 el.style.display = 'none';
             });
-        }, delay * 1_000);
+        }, effectiveDelayInSec * 1_000);
 
         // show only selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
