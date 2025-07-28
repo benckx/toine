@@ -126,8 +126,9 @@ th, td {
 #purse {
     background: url("images/purse_1f45b.png");
     background-repeat: no-repeat;
-    background-size: 500px 400px;
-    padding: 100px;
+    background-size: 600px 600px;
+    padding: 300px 180px;
+    margin-left:20px;
 
 }
 
