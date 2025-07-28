@@ -56,7 +56,7 @@ a:link {
     color: white;
     padding: 30px 40px;
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     text-decoration: none;
     display: inline-block;
     border-radius: 10rem;
@@ -86,7 +86,7 @@ th, td {
 
 .marquee {
     width: 100vw;
-    font-size: 70px;
+    font-size: 50px;
     padding: 20px;
     white-space: nowrap;
     overflow: hidden;
