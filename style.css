@@ -116,6 +116,7 @@ th, td {
     }
 }
 
+
 #emoji {
     position: absolute;
     font-size: 9rem;
@@ -129,6 +130,14 @@ th, td {
     background-size: 600px 600px;
     padding: 300px 180px;
     margin-left:20px;
+
+}
+#brands {
+    background: url("images/brands.png");
+    background-size: 200px 400px;
+    padding: 600px;
+    margin-left:20px;
+    margin-top:none;
 
 }
 
