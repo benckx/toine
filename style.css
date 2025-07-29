@@ -217,6 +217,43 @@ th, td {
         opacity: 0;
     }
 }
+.vertical-marquee {
+      height: 1000px;
+      width: 300px;
+      padding: 30px;
+      font-size:20px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #000;
+      opacity: 0;
+      animation: scroll-vertical 8s linear forwards;
+      animation-delay: 21s;
+      background-color: #f9f9f9;
+    }
+
+    .vertical-marquee-content {
+      position: absolute;
+      width: 100%;
+      animation: scroll-vertical 4s linear forwards;
+      opacity: 0;
+      animation-delay: 23s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes scroll-vertical {
+      0% {
+        top: -100%;
+        opacity: 1;
+      }
+      99% {
+              top: 100%;
+              opacity: 1;
+            }
+      100% {
+        top: 100%;
+        opacity: 0;
+      }
+    }
 
 
 @media (max-width: 1000px) {
