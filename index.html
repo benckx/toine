@@ -9,7 +9,7 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const FIRST_SLIDE = 'canchoose';
+        const FIRST_SLIDE = 'slide18';
 
         const sounds = new Map([
             ['enter', new Audio('sounds/toctoc.mp3')],
@@ -589,7 +589,8 @@
             </div>
         </div>
         <span class="tete" style="font-size:100px;animation-delay:29s">🌲</span>
-        <span class="turningemoji" style="font-size:300px;animation-delay:32s">✈️</span>
+        <span class="tete" style="font-size:100px;animation-delay:32s">🎄</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:31s">✈️</span>
         <span class="turningemoji-oppose" style="font-size:300px;animation-delay:33s">✈️</span>
         <div class="appear-post-sound" style="font-size:30px;padding:20px;margin-right:30px">
             <table style="width:100%;color:black">
@@ -644,17 +645,19 @@
         <span class="turningemoji" style="animation-delay:13s"><img src="images/pomcucul.png" alt="apple peach" style="width:300px"></span>
         <span class="turningemoji"><img src="images/pomcucul.png" alt="apple peach" style="width:300px"></span>
         <span class="turningemoji" style="animation-delay:19s;font-size:300px">🪱</span>
-        <span class="turningemoji-oppose" style="animation-delay:20s;font-size:300px">🪱</span>
-        <div class="tete" style="font-size:100px;animation-delay:25s">
+        <span class="turningemoji-oppose" style="animation-delay:21s;font-size:300px">🪱</span>
+        <div class="tete" style="font-size:100px;animation-delay:24s">
             <div>
                 <div>
                     🪳🪲🪳🐞🪲🐞🪳🪲🪳🐞🪳🪲🪳🐞🪳🪲🪳🪳
                 </div>
             </div>
         </div>
+        <div class="tete" style="animation-delay:34s">🔫️</div>
+        <span class="turningemoji" style="animation-delay:23s;font-size:300px">💊</span>
         <span class="turningemoji-oppose" style="animation-delay:27s;font-size:300px">🪝</span>
         <span class="turningemoji" style="animation-delay:30s;font-size:300px">🪱</span>
-        <div class="tete" style="font-size:100px;animation-delay:34s">🧞‍♂️</div>
+        <span class="turningemoji" style="animation-delay:40s;font-size:300px">💊</span>
         <div class="appear-post-sound" style="font-size:40px;padding:20px;margin-right:30px">
             <table style="width:100%">
                 <tr>
@@ -685,6 +688,74 @@
         </div>
     </div>
     <div id="slide19" class="slides">
+        <div id="emoji">💸️</div>
+        <script>
+            const emoji = document.getElementById("emoji");
+
+            // Taille de l'emoji
+            const emojiSize = 80; // en pixels
+            let x = 100;
+            let y = 100;
+            let dx = 3;
+            let dy = 2;
+
+            function animate() {
+              const width = window.innerWidth;
+              const height = window.innerHeight;
+
+              x += dx;
+              y += dy;
+
+              // Rebond sur les bords
+              if (x + emojiSize >= width || x <= 0) {
+                dx = -dx;
+              }
+
+              if (y + emojiSize >= height || y <= 0) {
+                dy = -dy;
+              }
+
+              emoji.style.left = x + "px";
+              emoji.style.top = y + "px";
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+        </script>
+        <span class="turningemoji-oppose" style="font-size:400px">🏁</span>
+        <div class="tete" style="font-size:20px;animation-delay:8s">
+            <div>
+                <div>♾️❓➕
+                    <p>❗➖🆘</p>
+                    <p>➗⭕🟰</p>
+                    <p>💯💲</p>
+                </div>
+            </div>
+        </div>
+        <span class="tete" style="font-size:50px;animation-delay:14s">🪩</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:17s">😶‍🌫️</span>
+        <span class="turningemoji-oppose" style="font-size:300px;animation-delay:20s">🪩</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:23s">🏐</span>
+        <span class="turningemoji-oppose" style="font-size:300px;animation-delay:26s">🎃</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:30s">🧩</span>
+        <span class="turningemoji-oppose" style="font-size:300px;animation-delay:33s">🤢</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:36s">🐚</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:39s">🤑</span>
+        <span class="turningemoji-oppose" style="font-size:300px;animation-delay:43s">🤢</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:45s">🪹</span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:50s">🪺</span>
+        <span class="turningemoji-oppose" style="font-size:300px;animation-delay:53s">🪺</span>
+        <span class="tete" style="font-size:30px;animation-delay:55s">🪺</span>
+        <div class="turningemoji" style="font-size:100px;animation-delay:59s;animation-duration:25s">
+            <div class="marquee">
+                <span style="animation:scroll-right 16s linear infinite">
+                    ☝🏿🫰🏻👉🫴🏼🤜☝🏿🫰🏻👉🫴🏼🤜☝🏿🫰🏻👉🫴🏼🤜☝🏿🫰🏻👉
+                </span>
+            </div>
+        </div>
+        <span class="turningemoji" style="font-size:300px;animation-delay:64s"><img src="images/nerd-joy.png" alt="nerd joystick" style="width:300px"></span>
+        <span class="turningemoji" style="font-size:300px;animation-delay:80s;animation-duration:5s"><img src="images/starhole.png" alt="medal lying" style="width:300px"></span>
         <div class="appear-post-sound" style="font-size:40px;padding:20px;margin-right:30px">
             <table style="width:100%">
                 <tr>
@@ -715,7 +786,7 @@
                 </tr>
             </table>
         </div>
-    </div>
+    </span>
     <div id="slide20" class="slides">
         <div class="appear-post-sound" style="font-size:40px;padding:20px;margin-right:30px">
             <table style="width:100%">
@@ -778,6 +849,6 @@
             each passing day.
         </div>
     </div>
-</div>
+</span>
 </body>
 </html>
