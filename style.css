@@ -13,7 +13,7 @@ body, body * {
 #container {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(DeepSkyBlue, white 60%);
+    background-image: linear-gradient(DeepSkyBlue, Grey 60%);
 }
 
 html, body, #container, .slides {
