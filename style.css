@@ -140,6 +140,14 @@ th, td {
     margin-top:none;
 
 }
+#can {
+    background: url("images/can.png");
+    background-size: 400px 400px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    margin:0;
+}
 
 .tete {
     font-size: 100px;
