@@ -54,9 +54,9 @@ html, body, #container, .slides {
 a:link {
     background-color: HotPink;
     color: white;
-    padding: 30px 40px;
+    padding: 20px 30px;
     text-align: center;
-    font-size: 50px;
+    font-size: 65px;
     text-decoration: none;
     display: inline-block;
     border-radius: 10rem;
