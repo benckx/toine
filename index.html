@@ -9,7 +9,7 @@
     <title>toine</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        const FIRST_SLIDE = 'enter';
+        const FIRST_SLIDE = 'safeword';
 
         const sounds = new Map([
             ['enter', new Audio('sounds/toctoc.mp3')],
@@ -81,7 +81,7 @@
         <div id="purse"><a href="#slide2" class="step-link" style="margin-top:80px:font-size:60px">ENTER</a>
         </div>
         <div class="marquee">
-            <span style="font-size:100px;color:DeepSkyBlue;margin-top:60px;text-shadow: 2px 2px 4px #000000">
+            <span style="font-size:100px;color:DeepSkyBlue;margin-top:30px;text-shadow: 2px 2px 4px #000000">
             🎧🎧🎧YOU🎧🎧🎧PLUG🎧🎧🎧IN🎧🎧🎧YOUR🎧🎧🎧HEADPHONES🎧🎧🎧AND🔊🔊🔊TURN🔊🔊🔊UP🔊🔊🔊THE🔊🔊🔊SOUND🔊🔊🔊
         </span>
         </div>
@@ -132,7 +132,7 @@
     </div>
     <div id="slide3" class="slides">
         <span class="tete">🪞</span>
-        <span class="turningemoji" style="animation-delay:3s"><img src="images/skull.webp" alt="💀"></span>
+        <span class="turningemoji" style="animation-delay:3s">💀</span>
         <div class="appear-post-sound">
             <div class="marquee">
             <span style="font-size:100px;text-shadow: 2px 2px 4px #000000;animation:scroll-right 8s linear infinite">FIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -227,7 +227,7 @@
                 <tr>
                     <td><a href="#slide9" class="step-link" style="background-color:LightGrey">🥒</a></td>
                     <td>
-                        <span style="color:green">
+                        <span style="color:LimeGreen">
                             I want to feel like a houseplant with goals.
                         </span>
                     </td>
@@ -249,7 +249,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="#slide9" class="step-link" style="background-color:LightGrey">🌶️</a></td>
+                    <td><a href="#safeword" class="step-link" style="background-color:LightGrey">🌶️</a></td>
                     <td>
                         <span style="color:DarkRed">
                             I like strong sensations and extreme practices.
@@ -259,6 +259,52 @@
             </table>
         </div>
     </div>
+    <div id="free" class="slides">
+        <span style="padding:20px;margin-bottom:90px;margin-top:-500px;font-size:40px;color:LightGrey">
+            I agree with you, freedom tastes like stale yoghurt. It will expire :
+        </span>
+        <table style="width:100%;padding:40px">
+            <tr>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">yesterday</a>
+                </td>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">tomorrow</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">never</a>
+                </td>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">forever</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="safeword" class="slides">
+        <span style="padding:20px;margin-bottom:90px;margin-top:-500px;font-size:40px;color:LightGrey">
+            You look <span style="color:Coral">brave</span>, it's better to choose a <span
+                style="color:yellow">safe</span><span style="color:red">word</span> :
+        </span>
+        <table style="width:100%;padding:40px">
+            <tr>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">🍑</a>
+                </td>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">🍆</a>
+                </td>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">🍎</a>
+                </td>
+                <td>
+                    <a href="#slide9" class="step-link" style="background-color:LightGrey">💊</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <div id="slide9" class="slides">
         <span class="turningemoji" style="animation-delay:1s;font-size:300px">🔨</span>
         <span class="tete" style="animation-delay:9s">🥗</span>
@@ -514,7 +560,8 @@
                 </span>
             </div>
         </div>
-        <span class="tete" style="animation-delay:38s;width:100px"><img src="images/shopping-cart.webp" alt="🛒" width="512"></span>
+        <span class="tete" style="animation-delay:38s;width:100px"><img src="images/shopping-cart.webp" alt="🛒"
+                                                                        width="512"></span>
         <div class="appear-post-sound" style="font-size:40px;padding:20px;margin-right:30px">
             <table style="width:100%">
                 <tr>
@@ -597,7 +644,8 @@
                             src="images/french-fries.webp" alt="🍟" width="100">️️</a></td>
                     <td>
                         <span style="color:yellow">
-                            I'd like to be <a href="#slide16" class="step-link" style="background-color:LightGrey">more</a> confident and feel less out of step with the implicit rules of collective
+                            I'd like to be <a href="#slide16" class="step-link"
+                                              style="background-color:LightGrey">more</a> confident and feel less out of step with the implicit rules of collective
                         sociability
                         </span>
                     </td>
@@ -616,7 +664,8 @@
                             src="images/popcorn.webp" alt="🍿" width="100">️</a></td>
                     <td>
                         <span style="color:yellow">
-                            I'd like to be less shy and manage to talk to <a href="#slide16" class="step-link" style="background-color:LightGrey">someone</a> sometimes
+                            I'd like to be less shy and manage to talk to <a href="#slide16" class="step-link"
+                                                                             style="background-color:LightGrey">someone</a> sometimes
                         </span>
                     </td>
                 </tr>
@@ -625,7 +674,9 @@
                             src="images/hamburger.webp" alt="️🍔" width="100">️</a></td>
                     <td>
                         <span style="color:red">
-                            I'd like to forget all the political information I've stored up <a href="#slide16" class="step-link" style="background-color:LightGrey">over</a> the last few years
+                            I'd like to forget all the political information I've stored up <a href="#slide16"
+                                                                                               class="step-link"
+                                                                                               style="background-color:LightGrey">over</a> the last few years
                         </span>
                     </td>
                 </tr>
@@ -634,7 +685,8 @@
                             src="images/pizza.webp" alt="️🍕" width="100">️</a></td>
                     <td>
                         <span style="color:yellow">
-                            I'd like to be so relaxed that <a href="#slide16" class="step-link" style="background-color:LightGrey">nothing</a> would matter anymore
+                            I'd like to be so relaxed that <a href="#slide16" class="step-link"
+                                                              style="background-color:LightGrey">nothing</a> would matter anymore
                         </span>
                     </td>
                 </tr>
@@ -643,7 +695,9 @@
                             src="images/meat-bone.webp" alt="️️🍗" width="100">️</a></td>
                     <td>
                         <span style="color:red">
-                            I'd like to discover <a href="#slide16" class="step-link" style="background-color:LightGrey">new</a> temporary emotions, little <a href="#slide16" class="step-link" style="background-color:LightGrey">free</a> snacks for my ego
+                            I'd like to discover <a href="#slide16" class="step-link"
+                                                    style="background-color:LightGrey">new</a> temporary emotions, little <a
+                                href="#slide16" class="step-link" style="background-color:LightGrey">free</a> snacks for my ego
                         </span>
                     </td>
                 </tr>
