@@ -16,34 +16,44 @@ function showPostSoundElements(slideDiv) {
 
 /**
  * @param slideId {string}
- * @param initial {boolean}
+ * @param animateAndPlaySounds {boolean}
  */
-function renderSlide(slideId, initial = false) {
+function renderSlide(slideId, animateAndPlaySounds) {
+    function hideAllEmojiElements(animationElements) {
+        animationElements.forEach(element => {
+            element.style.display = 'none';
+        });
+    }
+
+    function showAllEmojiElements(animationElements) {
+        animationElements.forEach(element => {
+            element.style.display = 'inline-block';
+        });
+    }
+
     const slideDiv = document.getElementById(slideId);
     if (slideDiv !== null) {
         // hide all appear-post-sound
         hidePostSoundElements();
 
-        const emojiElements = [];
-        emojiElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('turningemoji')));
-        emojiElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('tete')));
-        emojiElements.forEach(element => {
-            element.style.display = 'inline-block';
-        });
+        const animationElements = [];
+        animationElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('turningemoji')));
+        animationElements.push(...htmlCollectionToArray(slideDiv.getElementsByClassName('tete')));
 
-        const maxDelayInSec = Math.max(
-            ...emojiElements.map(el => parseFloat(window.getComputedStyle(el).animationDelay) || 0)
-        );
+        if (animateAndPlaySounds) {
+            showAllEmojiElements(animationElements);
 
-        const effectiveDelayInSec = maxDelayInSec + 8;
+            // hide all emoji elements after animation ends
+            const maxDelayInSec = Math.max(
+                ...animationElements.map(el => parseFloat(window.getComputedStyle(el).animationDelay) || 0)
+            );
 
-        console.log(`[${slideId}] - effective delay: ${effectiveDelayInSec} sec.`);
-
-        setTimeout(() => {
-            emojiElements.forEach(el => {
-                el.style.display = 'none';
-            });
-        }, effectiveDelayInSec * 1_000);
+            const effectiveDelayInSec = maxDelayInSec + 8;
+            console.log(`[${slideId}] - effective delay: ${effectiveDelayInSec} sec.`);
+            setTimeout(() => hideAllEmojiElements(animationElements), effectiveDelayInSec * 1_000);
+        } else {
+            hideAllEmojiElements(animationElements);
+        }
 
         // show only selected slide
         getElementsByClassNameArray('slides').forEach(slide => {
@@ -52,7 +62,7 @@ function renderSlide(slideId, initial = false) {
         slideDiv.classList.add('visible-slides');
 
         // play sound
-        if (!initial) {
+        if (animateAndPlaySounds) {
             if (sounds.has(slideId)) {
                 sounds.get(slideId).play();
             }
@@ -60,17 +70,7 @@ function renderSlide(slideId, initial = false) {
             showPostSoundElements(slideDiv);
         }
 
-        // apply other slide options
-        try {
-            const options = slideOptions.find(option => option.id === slideId);
-            if (options !== null && typeof options.title !== 'undefined') {
-                document.getElementsByTagName('title').item(0).innerText = options.title;
-            }
-        } catch (e) {
-            console.log(`Error applying options for slide ${slideId}:`, e);
-        }
-
-        // Push state to history
+        // push state to history
         history.pushState({slideId}, '', `#${slideId}`);
     } else {
         console.error(`slide with id ${slideId} not found`);
@@ -84,7 +84,7 @@ window.onload = () => {
             stepLink.addEventListener('click', (event) => {
                 event.preventDefault();
                 const slideId = event.target.getAttribute('href').substring(1);
-                renderSlide(slideId);
+                renderSlide(slideId, true);
             });
         });
 
@@ -101,8 +101,8 @@ window.onload = () => {
     // Listen for back/forward navigation
     window.onpopstate = (event) => {
         const slideId = event.state?.slideId || FIRST_SLIDE;
-        renderSlide(slideId, true);
+        renderSlide(slideId, false);
     };
 
-    renderSlide(FIRST_SLIDE, true);
+    renderSlide(FIRST_SLIDE, false);
 };

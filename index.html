@@ -6,11 +6,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
-    <title>toine</title>
+    <title>scanyourcan</title>
     <link rel="stylesheet" href="style.css">
     <script>
         const FIRST_SLIDE = 'enter';
 
+        /**
+         * @type {Map<string, HTMLAudioElement>}
+         */
         const sounds = new Map([
             ['enter', new Audio('sounds/toctoc.mp3')],
             ['slide2', new Audio('sounds/step.mp3')],
@@ -35,37 +38,6 @@
             ['slide20', new Audio('sounds/rate.mp3')],
             ['slide21', new Audio('sounds/whochoose.mp3')],
         ]);
-
-        const slideOptions = [
-            {
-                id: 'enter',
-                title: 'title 1'
-            },
-            {
-                id: 'slide2',
-                title: 'title 2'
-            },
-            {
-                id: 'slide3',
-                title: 'title 3'
-            },
-            {
-                id: 'slide4',
-                title: 'title 4'
-            },
-            {
-                id: 'slide5',
-                title: 'title 5'
-            },
-            {
-                id: 'slide6',
-                title: 'title 6'
-            },
-            {
-                id: 'slide7',
-                title: 'title 7'
-            }
-        ];
     </script>
     <script src="utils.js"></script>
     <script src="script.js"></script>
@@ -1311,25 +1283,25 @@
             let dy = 2;
 
             function animate() {
-              const width = window.innerWidth;
-              const height = window.innerHeight;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
 
-              x += dx;
-              y += dy;
+                x += dx;
+                y += dy;
 
-              // Rebond sur les bords
-              if (x + emojiSize >= width || x <= 0) {
-                dx = -dx;
-              }
+                // Rebond sur les bords
+                if (x + emojiSize >= width || x <= 0) {
+                    dx = -dx;
+                }
 
-              if (y + emojiSize >= height || y <= 0) {
-                dy = -dy;
-              }
+                if (y + emojiSize >= height || y <= 0) {
+                    dy = -dy;
+                }
 
-              emoji.style.left = x + "px";
-              emoji.style.top = y + "px";
+                emoji.style.left = x + "px";
+                emoji.style.top = y + "px";
 
-              requestAnimationFrame(animate);
+                requestAnimationFrame(animate);
             }
 
             animate();
