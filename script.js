@@ -101,6 +101,13 @@ window.onload = () => {
     // Listen for back/forward navigation
     window.onpopstate = (event) => {
         const slideId = event.state?.slideId || FIRST_SLIDE;
+
+        // stop any currently playing sounds
+        sounds.forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+
         renderSlide(slideId, false);
     };
 
