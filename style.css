@@ -10,6 +10,17 @@ body, body * {
     max-height: 1000000px;
 }
 
+/* avoid zooming on tapping */
+html {
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* avoid zooming on tapping */
+body {
+    touch-action: manipulation;
+}
+
 #container {
     width: 100%;
     height: 100vh;

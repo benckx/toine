@@ -1,5 +1,37 @@
 // noinspection JSIgnoredPromiseFromCall
 
+let wakeLock = null;
+
+// Request wake lock when page loads or user interacts
+async function requestWakeLock() {
+    try {
+        if ('wakeLock' in navigator) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Screen wake lock is active');
+        }
+    } catch (err) {
+        console.error('Wake lock request failed:', err);
+    }
+}
+
+// Release wake lock when leaving page
+function releaseWakeLock() {
+    if (wakeLock) {
+        wakeLock.release();
+        wakeLock = null;
+    }
+}
+
+// Request wake lock on page load
+document.addEventListener('DOMContentLoaded', requestWakeLock);
+
+// Re-request if page becomes visible again
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && !wakeLock) {
+        requestWakeLock();
+    }
+});
+
 function hidePostSoundElements() {
     getElementsByClassNameArray('appear-post-sound-visible')
         .forEach(element => {
@@ -112,4 +144,5 @@ window.onload = () => {
     };
 
     renderSlide(FIRST_SLIDE, false);
+    window.addEventListener('beforeunload', releaseWakeLock);
 };
