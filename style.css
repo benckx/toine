@@ -185,7 +185,7 @@ th, td {
         opacity: 1;
     }
     95% {
-        transform: scale(15);
+        transform: scale(5);
         opacity: 1;
     }
     100% {
