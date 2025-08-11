@@ -3,6 +3,7 @@ html, body {
     margin: 0%;
     padding: 0;
     overflow: hidden;
+    position: fixed;
 }
 
 /* https://stackoverflow.com/questions/13416989/computed-font-size-is-bigger-than-defined-in-css-on-the-asus-nexus-7 */
